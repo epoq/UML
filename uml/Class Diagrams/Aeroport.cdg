@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="test">
+  <ClassDiagramComponents>
+    <Class name="Avion" package="" visibility="public" xPosition="443.0" yPosition="22.0">
+      <Fields>
+        <Field name="immatriculation" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Proprietaire" package="" visibility="public" xPosition="152.0" yPosition="124.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Adresse" package="" visibility="public" xPosition="152.0" yPosition="290.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Mecanicien" package="" visibility="public" xPosition="443.0" yPosition="311.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Intervention" package="" visibility="public" xPosition="711.0" yPosition="124.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Pilote" package="" visibility="public" xPosition="415.0" yPosition="167.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="est possèdé" source="Avion" target="Proprietaire" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="réalise" source="Mecanicien" target="Intervention" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="habite" source="Proprietaire" target="Adresse" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="es habité" source="Adresse" target="Proprietaire" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="est réalisé" source="Intervention" target="Mecanicien" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="possède" source="Proprietaire" target="Avion" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="pilote" source="Pilote" target="Avion" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
